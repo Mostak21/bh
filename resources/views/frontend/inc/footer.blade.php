@@ -81,7 +81,7 @@
                         </li>
                         <li class="mb-2">
                            <span class="d-block opacity-30">{{translate('Phone')}}:</span>
-                           <span class="d-block opacity-70">{{ get_setting('contact_phone') }} hi</span>
+                           <span class="d-block opacity-70">{{ get_setting('contact_phone') }} </span>
                         </li>
                         <li class="mb-2">
                            <span class="d-block opacity-30">{{translate('Email')}}:</span>
