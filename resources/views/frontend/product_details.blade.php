@@ -474,6 +474,14 @@
                                     @endif
                                 </a>
                                 <div class="location opacity-70">{{ $detailedProduct->user->shop->address }}</div>
+                                @php
+                                $total = 0;
+                                $rating = 0;
+                                foreach ($detailedProduct->user->products as $key => $seller_product) {
+                                    $total += $seller_product->reviews->count();
+                                    $rating += $seller_product->reviews->sum('rating');
+                                }
+                               @endphp
                                 <div class="text-center border rounded p-2 mt-3">
                                     <div class="rating">
                                         @if ($total > 0)
